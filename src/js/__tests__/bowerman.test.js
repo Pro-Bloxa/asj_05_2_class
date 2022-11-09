@@ -1,7 +1,14 @@
 import Bowerman from '../bowerman';
 
 test('bowerman is created', () => {
-  const newCharacter = new Bowerman('bowerman', 'Bowerman');
-  expect(newCharacter.name).toBe('bowerman');
-  expect(newCharacter.type).toBe('Bowerman');
+  const received = new Bowerman('bowerman', 'Bowerman');
+  const expected = {
+    name: 'bowerman',
+    type: 'Bowerman',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  };
+  expect(received).toEqual(expected);
 });

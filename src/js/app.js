@@ -18,8 +18,8 @@ export default class Character {
     } else {
       throw new Error('Некорректный тип');
     }
-    this.name = name;
-    this.type = type;
+    this.health = 100;
+    this.level = 1;
   }
 
   levelUp() {

@@ -1,7 +1,14 @@
 import Magician from '../magician';
 
 test('magician is created', () => {
-  const newCharacter = new Magician('magician', 'Magician');
-  expect(newCharacter.name).toBe('magician');
-  expect(newCharacter.type).toBe('Magician');
+  const received = new Magician('magician', 'Magician');
+  const expected = {
+    name: 'magician',
+    type: 'Magician',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  };
+  expect(received).toEqual(expected);
 });
